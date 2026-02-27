@@ -1,9 +1,27 @@
-# AlkebulanCash (AKB)
+# AlkebulanCash (AKBC)
 
-AlkebulanCash (AKB) is an ERC20-based digital asset designed to support sustainable development, cross-border value exchange, and community-led innovation across Africa.
+AlkebulanCash (AKBC) is an ERC20-based digital asset designed to support sustainable development, cross-border value exchange, and community-led innovation across Africa.
 
 The project implements a transparent, fee-based treasury model that enables long-term ecosystem funding while maintaining decentralisation principles.
 
+## 🔗 Testnet Deployment — Ethereum Sepolia
+
+The AlkebulanCash (AKBC) protocol has been deployed to the Ethereum Sepolia testnet for validation.
+
+**AKBC Token Contract**
+- Address: `0x516027b80186f033E99B1dFaF325C8848A585196`
+- Network: Ethereum Sepolia
+- Explorer: https://sepolia.etherscan.io/address/0x516027b80186f033E99B1dFaF325C8848A585196
+
+**GasTreasury Contract**
+- Address: `0x05AdD8e86ce16f945D78C3139Bff5bF0C36111E9`
+- Explorer: https://sepolia.etherscan.io/address/0x05AdD8e86ce16f945D78C3139Bff5bF0C36111E9
+
+### Fee Validation
+A live transfer test confirmed that:
+- Non-whitelisted transfers incur a 0.1% AKBC protocol fee
+- Fees are correctly routed to the GasTreasury contract
+- Whitelisted administrative addresses are fee-exempt by design
 ---
 
 ## 🌍 Vision & Purpose
@@ -23,7 +41,7 @@ The project is intentionally open-source to encourage learning, reuse, and publi
 
 The system consists of two core smart contracts:
 
-### 1. AlkebulanCash (AKB)
+### 1. AlkebulanCash (AKBC)
 - ERC20 token with a **fixed supply** of 25,000,000 AKB
 - Implements a **0.1% transfer fee** on non-whitelisted transfers
 - Fee is redirected to an on-chain treasury
@@ -35,7 +53,7 @@ The system consists of two core smart contracts:
 
 ### 2. GasTreasury
 - Dedicated on-chain treasury contract
-- Receives protocol fees in AKB
+- Receives protocol fees in AKBC
 - Funds are withdrawable only by the treasury owner
 - Designed to be transferred to governance control in future phases
 
@@ -43,7 +61,7 @@ The system consists of two core smart contracts:
 
 ## 🔐 Fee & Treasury Model
 
-For each eligible AKB transfer:
+For each eligible AKBC transfer:
 - 99.9% is delivered to the recipient
 - 0.1% is routed to the GasTreasury contract
 
