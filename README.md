@@ -84,6 +84,15 @@ Planned governance milestones:
 
 This staged approach mirrors real-world protocol development best practices.
 
+## Governance
+
+AlkebulanCash (AKBC) uses on-chain, token-weighted governance powered by the OpenZeppelin Governor framework.
+
+AKBC holders can create proposals and vote on protocol decisions, with voting power proportional to their token holdings. All proposals and votes are recorded on-chain, ensuring transparent and verifiable governance outcomes.
+
+**Governor (Sepolia Testnet):**  
+`0x9Fcc2e61623876185caC80c6589918D8D0407111`
+
 ---
 
 ## 🛠️ Development Stack
