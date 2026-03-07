@@ -1,125 +1,229 @@
 # AlkebulanCash (AKBC)
 
-AlkebulanCash (AKBC) is an ERC20-based digital asset designed to support sustainable development, cross-border value exchange, and community-led innovation across Africa.
+AlkebulanCash (AKBC) is a blockchain-based governance and funding infrastructure designed to enable transparent, community-driven financing for innovation and development across Africa.
 
-The project implements a transparent, fee-based treasury model that enables long-term ecosystem funding while maintaining decentralisation principles.
+The system combines token governance, on-chain treasury management, and secure grant distribution to create a decentralized financial coordination layer for funding real-world projects.
+
+---
+
+## 🌍 Vision
+
+AlkebulanCash explores how decentralized governance can support:
+
+- Developer grants  
+- Research funding  
+- Startup ecosystem support  
+- Infrastructure financing  
+- Community innovation programs  
+
+The long-term goal is to build a **transparent decentralized funding infrastructure for Africa**.
+
+---
 
 ## 🔗 Testnet Deployment — Ethereum Sepolia
 
-The AlkebulanCash (AKBC) protocol has been deployed to the Ethereum Sepolia testnet for validation.
-
-**AKBC Token Contract**
-- Address: `0x516027b80186f033E99B1dFaF325C8848A585196`
-- Network: Ethereum Sepolia
-- Explorer: https://sepolia.etherscan.io/address/0x516027b80186f033E99B1dFaF325C8848A585196
-
-**GasTreasury Contract**
-- Address: `0x05AdD8e86ce16f945D78C3139Bff5bF0C36111E9`
-- Explorer: https://sepolia.etherscan.io/address/0x05AdD8e86ce16f945D78C3139Bff5bF0C36111E9
-
-### Fee Validation
-A live transfer test confirmed that:
-- Non-whitelisted transfers incur a 0.1% AKBC protocol fee
-- Fees are correctly routed to the GasTreasury contract
-- Whitelisted administrative addresses are fee-exempt by design
----
-
-## 🌍 Vision & Purpose
-
-AlkebulanCash was created to explore how blockchain-based financial primitives can be used to:
-
-- Address cross-border transaction inefficiencies
-- Provide sustainable funding for community-driven projects
-- Enable transparent, on-chain treasury management
-- Lay the groundwork for decentralised governance
-
-The project is intentionally open-source to encourage learning, reuse, and public scrutiny.
+The AlkebulanCash DAO infrastructure is currently deployed on the **Ethereum Sepolia Testnet**.
 
 ---
 
-## 🧱 Technical Overview
+## 🪙 AKBC Token
 
-The system consists of two core smart contracts:
+**Contract Address**
+**Contract Address**
 
-### 1. AlkebulanCash (AKBC)
-- ERC20 token with a **fixed supply** of 25,000,000 AKBC
-- Implements a **0.1% transfer fee** on non-whitelisted transfers
-- Fee is redirected to an on-chain treasury
-- Supports:
-  - Whitelisted fee exemptions
-  - Emergency pause functionality
-  - Role-based access control
-- Built using OpenZeppelin upgradeable contracts
 
-### 2. GasTreasury
-- Dedicated on-chain treasury contract
-- Receives protocol fees in AKBC
-- Funds are withdrawable only by the treasury owner
-- Designed to be transferred to governance control in future phases
+0x4354Ad0d942e2D80f6ce25Cb00A2d2B8dCF6116a
+
+
+**Explorer**
+
+https://sepolia.etherscan.io/address/0x4354Ad0d942e2D80f6ce25Cb00A2d2B8dCF6116a
+
+### Features
+
+- ERC20 token  
+- Fixed supply: **25,000,000 AKBC**  
+- **0.1% protocol transfer fee**  
+- Whitelist support  
+- Emergency pause functionality  
+- On-chain governance voting  
 
 ---
 
-## 🔐 Fee & Treasury Model
+## 🏛️ Governance (Governor)
+
+**Contract Address**
+
+
+0x6DE42b86C200Cf269f1cc291de52fD159FCFB1bD
+
+
+The Governor contract enables:
+
+- Proposal creation  
+- Token-weighted voting  
+- Governance execution  
+
+All governance decisions are recorded **on-chain and publicly verifiable**.
+
+---
+
+## ⏱ Timelock
+
+**Contract Address**
+
+
+0x4C8A70908DFcFc87D7A321C8fd7d80C40A6AC5a3
+
+
+The Timelock contract introduces a delay between proposal approval and execution.
+
+This provides:
+
+- Protection against malicious proposals  
+- Time for community review  
+- Additional governance security  
+
+---
+
+## ⛽ GasTreasury
+
+**Contract Address**
+
+
+0x3C80Cf3D6E14C744dcb5B249FdCa0b5164A788Fd
+
+
+The GasTreasury collects protocol fees generated from AKBC transfers.
+
+These fees are later routed into the DAO treasury.
+
+---
+
+## 🏦 DAO Treasury
+
+**Contract Address**
+
+
+0xE79d484b7b83f1B79Bff75d76930D6ED5fcf72eC
+
+
+The DAO Treasury securely stores funds controlled by governance.
+
+Funds can only be moved through **approved governance proposals**.
+
+---
+
+## 🎓 Grant Controller
+
+**Contract Address**
+
+
+0x13691dEEC936D6d8b20954E1C44F6576e127977a
+
+
+The Grant Controller adds an additional protection layer for treasury disbursements.
+
+Funds cannot be sent to arbitrary wallets unless the wallet has first been **approved as a grant recipient**.
+
+---
+
+## 🧱 System Architecture
+
+
+AKBC Token
+│
+▼
+Governor (DAO voting)
+│
+▼
+Timelock (execution delay)
+│
+▼
+Grant Controller (recipient approval)
+│
+▼
+DAO Treasury
+│
+▼
+GasTreasury (protocol fee collector)
+
+
+This architecture ensures that **no individual can move treasury funds without DAO approval**.
+
+---
+
+## 🔐 Security Model
+
+The AlkebulanCash governance system includes several protection layers.
+
+### Token Governance
+
+Token holders vote on proposals using token-weighted voting.
+
+### Timelock Delay
+
+Approved proposals cannot execute immediately.
+
+### Grant Recipient Approval
+
+Treasury funds can only be sent to pre-approved addresses.
+
+### Treasury Isolation
+
+Protocol fees are collected separately before entering the DAO treasury.
+
+---
+
+## 💰 Protocol Funding Model
+
+The protocol implements a **0.1% transfer fee**.
 
 For each eligible AKBC transfer:
-- 99.9% is delivered to the recipient
-- 0.1% is routed to the GasTreasury contract
 
-This model ensures:
-- Transparent, on-chain funding
-- Sustainable protocol development
-- Clear separation between user funds and treasury assets
 
----
+99.9% → recipient
+0.1% → GasTreasury
 
-## 🏛️ Governance Roadmap
 
-Governance is introduced in phases to reduce complexity and risk.
-
-Planned governance milestones:
-1. Deploy governance and timelock contracts
-2. Transfer administrative roles to governance
-3. Transfer GasTreasury ownership to governance
-4. Enable community-driven decision making
-
-This staged approach mirrors real-world protocol development best practices.
-
-## Governance
-
-AlkebulanCash (AKBC) uses on-chain, token-weighted governance powered by the OpenZeppelin Governor framework.
-
-AKBC holders can create proposals and vote on protocol decisions, with voting power proportional to their token holdings. All proposals and votes are recorded on-chain, ensuring transparent and verifiable governance outcomes.
-
-**Governor (Sepolia Testnet):**  
-`0x9Fcc2e61623876185caC80c6589918D8D0407111`
+These fees accumulate over time and can be allocated through governance proposals.
 
 ---
 
-## 🛠️ Development Stack
+## 🛠 Development Stack
 
-- Solidity ^0.8.x
-- Hardhat
-- OpenZeppelin Contracts (Upgradeable)
-- Ethereum Sepolia Testnet
-
----
-
-## 📄 Status
-
-- Core contracts implemented
-- Local compilation successful
-- Testnet deployment in progress
-- Governance contracts planned (Phase 2)
+- Solidity  
+- Hardhat  
+- OpenZeppelin Contracts  
+- Ethereum Sepolia Testnet  
+- OpenZeppelin Governor  
 
 ---
 
-## 🤝 Open Source & Contributions
+## 📄 Current Status
 
-This repository is public to support transparency, peer review, and educational use.  
-Issues and pull requests are welcome.
+- AKBC token deployed  
+- DAO governance operational  
+- Treasury architecture implemented  
+- Grant controller deployed  
+- Governance proposals successfully tested  
+
+---
+
+## 🤝 Open Source
+
+This repository is public to encourage transparency, research, and educational use.
+
+Contributions, issues, and pull requests are welcome.
 
 ---
 
 ## ⚠️ Disclaimer
 
-This project is experimental and deployed on testnet for learning and evaluation purposes.
+This project is experimental and currently deployed on the Ethereum Sepolia testnet for research and development purposes.
+
+---
+
+## 📜 License
+
+MIT License
