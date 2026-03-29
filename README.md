@@ -1,8 +1,6 @@
 # AlkebulanCash (AKBC)
 
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.19158117.svg)](https://doi.org/10.5281/zenodo.19158117)
-
-AlkebulanCash (AKBC) is an open-source decentralized governance and treasury system designed to enable transparent, community-driven funding using blockchain technology.
+AlkebulanCash (AKBC) is a decentralized governance and treasury system designed to enable transparent, community-driven funding using blockchain technology.
 
 The system integrates token governance, timelock-based execution, and validation layers to provide secure and accountable fund management for decentralized communities.
 
@@ -17,6 +15,8 @@ AlkebulanCash explores how decentralized governance can support:
 - Startup ecosystem support  
 - Infrastructure financing  
 - Community innovation programs  
+
+The goal is to build a transparent decentralized funding infrastructure for Africa.
 
 ---
 
@@ -45,17 +45,17 @@ The system is deployed on Ethereum Sepolia.
 
 ## 🧱 Architecture
 
-    AKBC Token
-       ↓
-    Governor (Voting)
-       ↓
-    Timelock (Delay)
-       ↓
-    Grant Controller (Validation)
-       ↓
-    DAO Treasury
-       ↓
-    GasTreasury (Fees)
+AKBC Token  
+↓  
+Governor (Voting)  
+↓  
+Timelock (Delay)  
+↓  
+Grant Controller (Validation)  
+↓  
+DAO Treasury  
+↓  
+GasTreasury (Fees)
 
 ---
 
@@ -76,28 +76,47 @@ The system is deployed on Ethereum Sepolia.
 
 ---
 
+## 🛠 Development Stack
+
+- Solidity  
+- Hardhat  
+- OpenZeppelin Contracts  
+- Ethereum Sepolia Testnet  
+
+---
+
 ## 🛠 Installation & Setup
 
 Clone the repository:
 
-    git clone https://github.com/calebadekunle/AlkebulanCash.git
-    cd AlkebulanCash
+```bash
+git clone https://github.com/calebadekunle/AlkebulanCash.git
+cd AlkebulanCash
+```
 
 Install dependencies:
 
-    npm install
+```bash
+npm install
+```
 
 Compile contracts:
 
-    npx hardhat compile
+```bash
+npx hardhat compile
+```
 
 Run tests:
 
-    npx hardhat test
+```bash
+npx hardhat test
+```
 
-Deploy (example):
+Deploy:
 
-    npx hardhat run scripts/deploy.js --network sepolia
+```bash
+npx hardhat run scripts/deploy.js --network sepolia
+```
 
 ---
 
@@ -118,6 +137,16 @@ Deploy (example):
 - Treasury implemented  
 - Grant controller active  
 - Proposals tested  
+
+---
+
+## 🚧 Roadmap
+
+- Frontend interface for DAO interaction  
+- Improved governance workflow  
+- Expanded smart contract test coverage  
+- Gas optimization improvements  
+- Enhanced developer documentation  
 
 ---
 
