@@ -152,7 +152,16 @@ npx hardhat run scripts/deploy.js --network sepolia
 
 ## 🤝 Contributing
 
-Contributions are welcome via issues and pull requests.
+We welcome contributions from developers, researchers, and community members.
+
+To contribute:
+
+1. Fork the repository  
+2. Create a new branch  
+3. Make your changes  
+4. Submit a pull request  
+
+Please ensure your code follows best practices and is properly tested.
 
 ---
 
